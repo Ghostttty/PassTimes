@@ -22,6 +22,10 @@ private slots:
 
     void on_buttonSeqMulty_clicked();
 
+    void on_pushButtonTwoThreed_clicked();
+
+    void on_pushButtonFourThreed_clicked();
+
 private:
     Ui::MainWindow *ui;
     Array ar;

@@ -1,15 +1,25 @@
 #include "threads.h"
 #include <QDebug>
+#include <QVector>
 
 
-Threads::Threads(QString s):QThread()
+Threads::Threads(int start, int stop, QVector<int> &p):QThread(),startValue(start),stopValue(stop),copyArray(p)
 {
-    name=s;
+
 }
+
 
 void Threads::run()
 {
-    for (int i = 0; i < 100; i++ ) {
-        qDebug()<<i;
+    for(int i=startValue;i<stopValue;i++){
+        for(int j=startValue;j<stopValue;j++){
+            sum+=sqrt(copyArray[i]*copyArray[j]);
+//            qDebug()<<i+" "+j;
+        }
     }
+}
+
+int Threads::getSum()
+{
+    return sum;
 }

@@ -4,20 +4,22 @@
 #include <qvector.h>
 #include <QString>
 #include <QThread>
-#include <thread>
-#include <chrono>
+#include <vector>
 
 
 
 class Array
 {
-private:
+//private:
+public:
     QVector<int> array,arrayMulty;
     double Times();
 //    QVector<thread> threads;
-    double ParrTime();
+    QString ParrTime();
+    double TwoThreed();
+    QString QuadroThreed();
     int Multi(int start,int stop,int indexThread);
-public:
+//public:
     Array();
     bool Init();
     QString ParrTimes();

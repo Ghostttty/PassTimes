@@ -2,7 +2,6 @@
 #include "ui_mainwindow.h"
 #include "threads.h"
 #include <QDebug>
-#include <QThread>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -24,8 +23,21 @@ void MainWindow::on_InitArrrayButton_clicked()
 void MainWindow::on_buttonSeqMulty_clicked()
 {
     ui->labelSeqMultyResult->setText(ar.ParrTimes());
-    Threads* tFirst=new Threads("One");
-    tFirst->wait();
-    delete(tFirst);
+
+//    Threads tFirst("One");
+//    tFirst.wait();
+//    delete(&tFirst);
+//    deleteLater
+
     qDebug()<<"I't ok";
+}
+
+void MainWindow::on_pushButtonTwoThreed_clicked()
+{
+    ui->TwoThreedLabel->setText(ar.ParrTime());
+}
+
+void MainWindow::on_pushButtonFourThreed_clicked()
+{
+    ui->FourThreedLabel->setText(ar.QuadroThreed());
 }
