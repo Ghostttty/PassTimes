@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include "array.h"
+#include "threadsoldc.h"
 
 #include <QMainWindow>
 
@@ -26,9 +27,16 @@ private slots:
 
     void on_pushButtonFourThreed_clicked();
 
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_buttonConcurrent_clicked();
+
 private:
     Ui::MainWindow *ui;
     Array ar;
+    ThreadsOldC toc;
 };
 
 #endif // MAINWINDOW_H

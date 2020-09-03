@@ -12,10 +12,9 @@ Threads::Threads(int start, int stop, QVector<int> &p):QThread(),startValue(star
 void Threads::run()
 {
     for(int i=startValue;i<stopValue;i++){
-        for(int j=startValue;j<stopValue;j++){
-            sum+=sqrt(copyArray[i]*copyArray[j]);
+            sum*=pow(copyArray[i],copyArray[i]);
 //            qDebug()<<i+" "+j;
-        }
+
     }
 }
 

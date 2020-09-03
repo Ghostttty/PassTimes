@@ -13,16 +13,24 @@ class Array
 //private:
 public:
     QVector<int> array,arrayMulty;
-    double Times();
+    QString Times();
+    int valueOfLenghtVector=0;
 //    QVector<thread> threads;
     QString ParrTime();
+    QString EightThreadTime();
+    QString SixteenThreadTime();
     double TwoThreed();
     QString QuadroThreed();
     int Multi(int start,int stop,int indexThread);
 //public:
     Array();
-    bool Init();
+    bool Init(int lenghtVector);
     QString ParrTimes();
+    int test1();
+    int test2();
+    int test3();
+    int test4();
+    QString TestConcurrent();
 };
 
 #endif // ARRAY_H

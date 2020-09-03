@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
     threads.cpp \
         mainwindow.cpp \
-    array.cpp
+    array.cpp \
+    threadsoldc.cpp
 
 HEADERS += \
     threads.h \
         mainwindow.h \
-    array.h
+    array.h \
+    threadsoldc.h
 
 FORMS += \
         mainwindow.ui
